@@ -1,0 +1,12 @@
+{
+  "name": "booking-service",
+  "version": "1.0.0",
+  "description": "Booking Service REST API Gateway",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

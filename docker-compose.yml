@@ -1,0 +1,27 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  inventory_service:
+    build:
+      context: ./inventory_service
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  booking_service:
+    build:
+      context: ./booking_service
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - INVENTORY_SERVICE_URL=http://inventory_service:5001/reserve
+    depends_on:
+      - inventory_service

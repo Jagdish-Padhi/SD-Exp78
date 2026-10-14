@@ -1,0 +1,17 @@
+{
+  "name": "exp-microservices-redis-lock",
+  "version": "1.0.0",
+  "description": "Experiment 6: Distributed Locking in a Booking Scenario using Redis and Node.js Microservices",
+  "scripts": {
+    "test": "node client_test.js"
+  },
+  "keywords": [
+    "redis",
+    "distributed-lock",
+    "microservices",
+    "nodejs",
+    "docker"
+  ],
+  "author": "",
+  "license": "ISC"
+}
